@@ -39,7 +39,7 @@ jobs:
           source: "deploy/docker-compose.yaml"
           target: "todolist"
           strip_components: 1
-      - name: deploy app
+      - name: run app
         uses: appleboy/scp-action@master
         with:
           host: ${{secrets.HOST}}
