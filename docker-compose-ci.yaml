@@ -38,8 +38,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    volumes:
-      - ./.env:/ToDoList_django_project/.env
     command: >
       sh -c "python manage.py migrate"
   db:
