@@ -13,6 +13,8 @@ services:
       context: .
     image: loncevrot/django_app
     restart: always
+    env_file:
+      - .env
     depends_on:
       db:
         condition: service_healthy
@@ -24,9 +26,13 @@ services:
     build:
       context: .
     image: loncevrot/django_app
+    env_file:
+      - .env
     depends_on:
       db:
         condition: service_healthy
+    volumes:
+      - ./.docker_env:/ToDoList_django_project/.env
     command: >
       sh -c "python manage.py migrate"
   db:
