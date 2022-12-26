@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   frontend:
-    image: sermalenk/skypro-front:lesson-34
+    image: sermalenk/skypro-front:lesson-35
     restart: always
     depends_on:
       - api
@@ -21,7 +21,7 @@ services:
       migrations:
         condition: service_completed_successfully
     ports:
-      - 8000:8000
+      - "8000:8000"
   migrations:
     build:
       context: .
@@ -45,7 +45,7 @@ services:
     volumes:
       - ./pg_data:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - "5432:5432"
     healthcheck:
       test: pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}
       interval: 3s
