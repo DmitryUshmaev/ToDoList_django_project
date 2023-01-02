@@ -25,7 +25,9 @@ services:
       migrations:
         condition: service_completed_successfully
     ports:
-      - 8000:8000
+      - "8000:8000"
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
   migrations:
     image: loncevrot/django_app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     environment:
