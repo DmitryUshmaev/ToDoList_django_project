@@ -22,7 +22,7 @@ class GoalCategoryListView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = GoalCategorySerializer
     filter_backends = [filters.OrderingFilter, filters.SearchFilter]
-    ordering_fields = ['title', 'created']
+    ordering_fields = ["title", 'created']
     ordering = ['title']
     search_fields = ['title']
 
