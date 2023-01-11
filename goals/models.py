@@ -100,3 +100,5 @@ class BoardParticipant(DatesModelMixin):
     role = models.PositiveSmallIntegerField(
         verbose_name='Роль', choices=Role.choices, default=Role.owner
     )
+
+##
