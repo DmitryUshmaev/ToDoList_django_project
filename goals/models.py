@@ -101,3 +101,4 @@ class BoardParticipant(DatesModelMixin):
         verbose_name='Роль', choices=Role.choices, default=Role.owner
     )
 
+##
