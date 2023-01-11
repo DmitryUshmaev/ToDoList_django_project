@@ -74,7 +74,7 @@ class Board(DatesModelMixin):
 class BoardParticipant(DatesModelMixin):
     class Meta:
         unique_together = ('board', 'user')
-        verbose_name = 'Участник'
+        verbose_name = "Участник"
         verbose_name_plural = 'Участники'
 
     class Role(models.IntegerChoices):
@@ -87,7 +87,7 @@ class BoardParticipant(DatesModelMixin):
 
     board = models.ForeignKey(
         Board,
-        verbose_name='Доска',
+        verbose_name='Доск',
         on_delete=models.PROTECT,
         related_name='participants',
     )
@@ -100,3 +100,4 @@ class BoardParticipant(DatesModelMixin):
     role = models.PositiveSmallIntegerField(
         verbose_name='Роль', choices=Role.choices, default=Role.owner
     )
+
