@@ -17,4 +17,3 @@ urlpatterns = [
     path('board/<pk>', views.BoardView.as_view())
 ]
 
-##
