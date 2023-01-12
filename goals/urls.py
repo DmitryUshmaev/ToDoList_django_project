@@ -16,3 +16,5 @@ urlpatterns = [
     path('board/list', views.BoardListView.as_view(), name='board_list'),
     path('board/<pk>', views.BoardView.as_view())
 ]
+
+##
