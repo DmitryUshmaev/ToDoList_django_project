@@ -21,3 +21,5 @@ class TgUserUpdate(generics.UpdateAPIView):
 
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
+
+##
