@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from bot.models import TgUser
-from bot.tg.client import tg_client
+from bot.tg import tg_client
 
 
 class TgUserVerCodSerializer(serializers.ModelSerializer):
