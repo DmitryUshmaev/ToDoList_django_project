@@ -6,3 +6,5 @@ urlpatterns = [
     path('verify', views.TgUserUpdate.as_view()),
     path('verify', views.VerificationView.as_view()),
 ]
+
+##
