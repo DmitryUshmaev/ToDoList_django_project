@@ -6,9 +6,8 @@ from rest_framework import permissions
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 
-
 from bot.models import TgUser
-from bot.serializers import TgUserVerCodSerializer
+from bot.serializers import TgUserVerCodSerializer, TgUserSerializer
 
 
 class TgUserUpdate(generics.UpdateAPIView):
@@ -26,6 +25,7 @@ class TgUserUpdate(generics.UpdateAPIView):
 
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
+
 
 class VerificationView(GenericAPIView):
     model = TgUser
