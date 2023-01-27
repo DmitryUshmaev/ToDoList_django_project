@@ -61,7 +61,6 @@ services:
       POSTGRES_PORT: ${POSTGRES_PORT}
     volumes:
       - ./pg_data:/var/lib/postgresql/data
-      - ./.env:/app/ToDoList_django_project/.env
     ports:
       - "5432:5432"
     healthcheck:
